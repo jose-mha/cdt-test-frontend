@@ -1,23 +1,26 @@
 import React from 'react';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+
 import Header from '../components/Header';
+import Home from '../pages/Home';
+import NotFound from '../pages/NotFound';
+
 import './App.css';
-import background from '../assets/office.jpg';
+
+import Product from '../components/Product';
 
 function AppUI() {
   return (
     <React.Fragment>
+      <Header />
       <section className="w-auto h-screen">
-        <Header />
-
-        <div className="w-full h-screen">
-          <div id="home">
-            <div className="w-full h-3/4">
-              <div className="w-full h-full">
-                <img src={background} alt="background" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/products" element={<Product />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
       </section>
     </React.Fragment>
   );
