@@ -1,11 +1,12 @@
 import React from 'react';
+import { AppProvider } from './context';
 import AppUI from './AppUI';
 
 function App() {
   return (
-    <div>
+    <AppProvider>
       <AppUI />
-    </div>
+    </AppProvider>
   );
 }
 

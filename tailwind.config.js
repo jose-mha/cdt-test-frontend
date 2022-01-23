@@ -7,10 +7,18 @@ module.exports = {
       },
       backgroundColor: (theme) => ({
         ...theme('colors'),
-        primary: '#CC2D4A',
+        principal: '#CC2D4A',
         secondary: '#8FA206',
-        terciary: '#61AEC9',
+        tertiary: '#61AEC9',
       }),
+      textColor: {
+        principal: '#0099ff',
+        secondary: '#8FA206',
+        tertiary: '#61AEC9',
+      },
+      fontFamily: {
+        Montserrat: ['Montserrat', 'sans-serif'],
+      },
     },
   },
   plugins: [],
